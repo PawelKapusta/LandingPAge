@@ -146,8 +146,8 @@ header {
 .clock:before {
     content: "";
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     background: #fff;
     border-radius: 50%;
     z-index: 10000;
@@ -170,8 +170,8 @@ header {
 }
 
 .clock .sec .sc {
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
 }
 
 .hr,
@@ -185,7 +185,7 @@ header {
 
 .hr:before {
     content: "";
-    position: relative;
+    position: absolute;
     width: 8px;
     height: 80px;
     background: #ff105e;
@@ -197,7 +197,7 @@ header {
     content: "";
     position: relative;
     width: 4px;
-    height: 80px;
+    height: 90px;
     background: #fff;
     z-index: 11;
     border-radius: 6px 6px 0 0;
@@ -207,7 +207,7 @@ header {
     content: "";
     position: relative;
     width: 2px;
-    height: 80px;
+    height: 100px;
     background: #1900f8;
     z-index: 12;
     border-radius: 6px 6px 0 0;

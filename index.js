@@ -1,15 +1,16 @@
-const deg = 6;
-const hr = document.getElementById("hr");
-const mn = document.getElementById("mn");
-const sc = document.getElementById("sc");
-setInterval(() => {
-    let day = new Date();
-    let hh = day.getHours() * 30;
+function clock() {
+    var hours = document.getElementById("hour");
+    var minutes = document.getElementById("minute");
+    var seconds = document.getElementById("second");
 
-    var mm = day.getMinutes() * deg;
-    var ss = day.getSeconds() * deg;
-    var count = hh + mm / 12;
-    hr.style.transform = "rotateZ(${count}deg)";
-    mn.style.transform = "rotateZ(${mn}deg)";
-    sc.style.transform = "rotateZ(${ss}deg)";
-});
+    var today = new Date();
+    var h = today.getHours;
+    var m = today.getMinutes;
+    var s = today.getSeconds;
+
+    void(hours.innerHTML = h);
+    void(minutes.innerHTML = m);
+    void(seconds.innerHTML = s);
+}
+
+var interval = setInterval(clock, 1000);

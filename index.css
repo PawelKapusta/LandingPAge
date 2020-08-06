@@ -1,5 +1,6 @@
 body {
-    background-color: #112c38;
+    background: url(q.jpeg) no-repeat;
+    background-size: cover;
     height: 100vh;
 }
 
@@ -62,9 +63,8 @@ header {
     height: 100%;
 }
 
-.navbar ul>li {
+.navbar ul li {
     margin: 1% 1% 5% 0;
-    padding: 0;
     width: 100%;
     list-style: none;
     transition: 0.5s;
@@ -74,15 +74,24 @@ header {
 .navbar ul li a {
     display: block;
     height: 100%;
-    padding: 0;
-    margin: 0 auto;
+    margin: auto;
     color: #fff;
+    background-color: #2eb8b8;
     text-decoration: none;
     font-family: sans-serif;
     text-transform: uppercase;
     transition: 0.5s;
+    border: 1px solid #00cc99;
+    border-radius: 15%;
+}
+
+.navbar ul li a span {
+    top: 30px;
+    position: relative;
+    margin: auto;
     text-align: center;
-    border: 1px solid #ff497c;
+    font-weight: 900;
+    font-size: 20px;
 }
 
 .navbar ul:hover li a {
@@ -93,9 +102,10 @@ header {
 
 .navbar ul li a:hover {
     background-color: #ff497c;
-    transform: scale(1.5);
+    transform: scale(1.2);
     opacity: 1;
     filter: blur(0);
+    border-radius: 15%;
 }
 
 .navbar ul li a:before {
@@ -113,6 +123,7 @@ header {
 
 .navbar ul li a:hover:before {
     border: 1px solid #ff497c;
+    border-radius: 20%;
     background-color: #112c38;
     transition: transform 1.75s;
     transform-origin: right;
@@ -129,9 +140,11 @@ header {
 #clock {
     justify-content: center;
     align-items: center;
-    background: #060a1f;
+    background: #004466;
     width: 25%;
     height: 135%;
+    border-radius: 13%;
+    box-shadow: 10px 10px 40px #888888;
 }
 
 #clock #time {
@@ -190,4 +203,61 @@ header {
 
 #clock #time div:last-child span:nth-child(2) {
     background: #ec0062;
+}
+
+#mainPage {
+    border: 1px solid red;
+    height: 70vh;
+    padding-top: 3%;
+    margin: 1% 2%;
+    width: 195vh;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    position: relative;
+    display: flex;
+    transition: 0.5s;
+    justify-content: space-between;
+}
+
+#mainPage .myPhoto {
+    position: relative;
+    text-align: center;
+    margin-left: 6%;
+    height: auto;
+    border: 1px solid yellow;
+}
+
+#mainPage .myPhoto img {
+    opacity: 0.6;
+    transition: 0.5s;
+    height: 85%;
+    width: 80%;
+    position: relative;
+}
+
+#mainPage .myPhoto .content h2 {
+    position: absolute;
+    bottom: 70px;
+    left: 44px;
+    opacity: 0;
+}
+
+#mainPage .myPhoto:hover img {
+    opacity: 1;
+    box-shadow: 0 0 0 3px #ff006a;
+}
+
+#mainPage .myPhoto:hover .content h2 {
+    opacity: 0.8;
+    width: 80%;
+    color: #fff;
+    background-color: #111;
+}
+
+#mainPage .aboutMe {
+    margin: 0;
+    padding: 0;
+    border: 1px solid white;
+    margin-left: -30%;
+    width: 30%;
 }

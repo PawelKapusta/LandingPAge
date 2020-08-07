@@ -208,7 +208,6 @@ header {
 }
 
 #mainPage {
-    border: 1px solid red;
     height: 70vh;
     padding-top: 3%;
     margin: 1% 2%;
@@ -226,7 +225,6 @@ header {
     text-align: center;
     margin-left: 6%;
     height: auto;
-    border: 1px solid yellow;
     width: 25%;
 }
 
@@ -262,7 +260,6 @@ header {
     margin: 0 -30%;
     padding: 0;
     color: #fff;
-    border: 1px solid white;
     margin-left: -30%;
     width: 30%;
     height: auto;
@@ -318,7 +315,7 @@ header {
     padding: 25px;
     border-radius: 5%;
     text-align: center;
-    box-shadow: 20px 4px 70px rgba(254, 236, 164, 1);
+    box-shadow: 20px 4px 30px rgba(254, 236, 164, 1);
     text-transform: uppercase;
     letter-spacing: 3px;
     background: #ffff66;
@@ -364,7 +361,84 @@ header {
 }
 
 footer {
-    background-color: #00cc99;
+    background-color: #000;
+    box-shadow: 20px 0px 30px #004de6;
+    border-radius: 10%;
     height: 10em;
-    margin: 0 2%;
+    box-sizing: border-box;
+}
+
+.icons {
+    display: flex;
+    margin-left: 23%;
+}
+
+.icons ul {
+    position: relative;
+    display: flex;
+}
+
+.icons ul li {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    margin: 0 10%;
+}
+
+.icons ul li a {
+    text-decoration: none;
+}
+
+.icons ul li a .fa {
+    font-size: 7em;
+    color: #222;
+}
+
+.icons ul li::before {
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 7em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.icons ul li:nth-child(1)::before {
+    content: "\f09b";
+    color: #999;
+    border-bottom: 4px solid #999;
+}
+
+.icons ul li:nth-child(2)::before {
+    content: "\f08c";
+    color: #000080;
+    border-bottom: 4px solid #000080;
+}
+
+.icons ul li:nth-child(3)::before {
+    content: "\f1be";
+    color: #ff6600;
+    border-bottom: 4px solid #ff6600;
+}
+
+.icons ul li:nth-child(4)::before {
+    content: "\f16a";
+    color: #cc3300;
+    border-bottom: 4px solid #cc3300;
+}
+
+.icons ul li:nth-child(5)::before {
+    content: "\f16d";
+    color: #f09433;
+    background: radial-gradient( circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid #f09433;
+}
+
+.icons ul li:hover::before {
+    height: 100%;
 }

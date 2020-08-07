@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 body {
     background: url(q.jpeg) no-repeat;
     background-size: cover;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 header {
@@ -97,12 +99,12 @@ header {
 .navbar ul:hover li a {
     transform: scale(1);
     opacity: 2;
-    filter: blur(5px);
+    filter: blur(10px);
 }
 
 .navbar ul li a:hover {
     background-color: #ff497c;
-    transform: scale(1.2);
+    transform: scale(1.15);
     opacity: 1;
     filter: blur(0);
     border-radius: 15%;
@@ -124,7 +126,7 @@ header {
 .navbar ul li a:hover:before {
     border: 1px solid #ff497c;
     border-radius: 20%;
-    background-color: #112c38;
+    background-color: #2eb8b8;
     transition: transform 1.75s;
     transform-origin: right;
     transform: scaleX(0);
@@ -225,10 +227,11 @@ header {
     margin-left: 6%;
     height: auto;
     border: 1px solid yellow;
+    width: 25%;
 }
 
 #mainPage .myPhoto img {
-    opacity: 0.6;
+    opacity: 0.2;
     transition: 0.5s;
     height: 85%;
     width: 80%;
@@ -251,13 +254,117 @@ header {
     opacity: 0.8;
     width: 80%;
     color: #fff;
-    background-color: #111;
+    background-color: #a9a9a9;
 }
 
 #mainPage .aboutMe {
-    margin: 0;
+    position: relative;
+    margin: 0 -30%;
     padding: 0;
+    color: #fff;
     border: 1px solid white;
     margin-left: -30%;
     width: 30%;
+    height: auto;
+}
+
+#mainPage .aboutMe h3 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+#mainPage .aboutMe h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+#mainPage .aboutMe h4 {
+    font-size: 1.2em;
+}
+
+#mainPage .aboutMe .text h2,
+#mainPage .aboutMe .text h3,
+#mainPage .aboutMe .text h4 {
+    text-align: center;
+    position: relative;
+    font-family: sans-serif;
+}
+
+#mainPage .aboutMe .text h3 {
+    overflow: hidden;
+    background: linear-gradient(90deg, #fff, #000);
+    background-repeat: no-repeat;
+    animation: animate 10s linear infinite;
+    background-size: 80%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+#mainPage .forms {
+    margin-top: 1%;
+    width: 29%;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 25px;
+    border-radius: 5%;
+    text-align: center;
+    box-shadow: 20px 4px 70px rgba(254, 236, 164, 1);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: #ffff66;
+}
+
+#mainPage .forms .text {
+    margin-bottom: 5%;
+}
+
+#mainPage .forms .text input[type="text"],
+#mainPage .forms .text textarea {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    padding: 1%;
+}
+
+#mainPage .forms .text textarea {
+    height: 70px;
+    resize: none;
+}
+
+#mainPage .forms #errorMessage {
+    margin-bottom: 20px;
+    padding: 3%;
+    background: #fe8b8e;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+    color: #fff;
+}
+
+#mainPage .forms .btn input[type="submit"] {
+    width: 50%;
+    padding: 2%;
+    background-color: #fece0c;
+    color: #332902;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 12%;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+footer {
+    background-color: #00cc99;
+    height: 10em;
+    margin: 0 2%;
 }
